@@ -1,264 +1,588 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>Tờ Rơi – YOHU Việt Nam</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800;900&display=swap');
-* { box-sizing: border-box; margin: 0; padding: 0; }
-@page { size: A4 portrait; margin: 0; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiết Kế Website Trọn Gói – YOHU Việt Nam | Chỉ từ 500K</title>
+  <meta name="description" content="Thiết kế website trọn gói chuyên nghiệp chỉ từ 500.000₫. Hoàn thiện 1–3 ngày, chuẩn SEO, chuẩn Mobile, tích hợp 2 ngôn ngữ. Dành riêng cho doanh nghiệp nhỏ Việt Nam." />
+  <meta name="keywords" content="thiết kế website, làm website giá rẻ, website doanh nghiệp, website trọn gói, YOHU Việt Nam, website chuẩn SEO, website 500k" />
+  <meta name="author" content="Công ty TNHH YOHU Việt Nam" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yohu.vn" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Thiết Kế Website Trọn Gói – YOHU Việt Nam | Chỉ từ 500K" />
+  <meta property="og:description" content="Giải pháp website doanh nghiệp mini: nhanh – rẻ – chuyên nghiệp. Hoàn thiện 1–3 ngày. Liên hệ ngay!" />
+  <meta property="og:url" content="https://yohu.vn" />
+  <meta property="og:locale" content="vi_VN" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Công ty TNHH YOHU Việt Nam","description":"Thiết kế website trọn gói chuyên nghiệp cho doanh nghiệp nhỏ Việt Nam","address":{"@type":"PostalAddress","streetAddress":"BT39 Khu Biệt thự Tân Phố Hiến","addressLocality":"Hưng Yên","addressCountry":"VN"},"telephone":"+84973480488","email":"yohu.vn@gmail.com","url":"https://yohu.vn","priceRange":"₫","offers":{"@type":"Offer","name":"Thiết kế website trọn gói","price":"500000","priceCurrency":"VND"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lexend:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:       #F0F7F0;
+      --bg2:      #E6F2E6;
+      --bg3:      #DAEEDA;
+      --surface:  #FFFFFF;
+      --border:   #C5DFC5;
+      --green:    #2D7A3A;
+      --green2:   #3A9648;
+      --green3:   #4DB860;
+      --accent:   #1B5C27;
+      --text:     #1A2E1A;
+      --muted:    #5A7A5A;
+      --light:    #8AAE8A;
+      --gold:     #E8A020;
+      --radius:   12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+      font-size: 15px;
+    }
 
-body {
-  width: 210mm; height: 297mm;
-  font-family: 'Be Vietnam Pro', Arial, sans-serif;
-  background: #0d0d1f; color: #fff;
-  overflow: hidden;
-  position: relative;
-}
+    /* HEADER */
+    header {
+      background: rgba(240,247,240,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+      padding: 12px 0;
+    }
+    .header-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.4rem; font-weight: 700;
+      color: var(--green); text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .logo span { color: var(--gold); }
+    .btn-cta-sm {
+      background: var(--green);
+      color: #fff; font-weight: 600; font-size: 0.82rem;
+      padding: 9px 20px; border-radius: 50px; text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-cta-sm:hover { background: var(--accent); transform: translateY(-1px); }
 
-.bg-c1 {
-  position: absolute; top: -50mm; left: -35mm;
-  width: 120mm; height: 120mm;
-  background: radial-gradient(circle, rgba(255,120,20,0.18) 0%, transparent 70%);
-  border-radius: 50%;
-}
-.bg-c2 {
-  position: absolute; bottom: 10mm; right: -25mm;
-  width: 90mm; height: 90mm;
-  background: radial-gradient(circle, rgba(255,210,50,0.10) 0%, transparent 70%);
-  border-radius: 50%;
-}
+    /* HERO VIDEO */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+      text-align: center;
+    }
+    .hero-video-wrap {
+      position: absolute; inset: 0; z-index: 0;
+    }
+    .hero-video-wrap video {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom,
+        rgba(10,40,10,0.62) 0%,
+        rgba(10,40,10,0.50) 60%,
+        rgba(10,40,10,0.72) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 760px; padding: 40px 24px;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(77,184,96,0.2);
+      border: 1px solid rgba(77,184,96,0.5);
+      color: #A8EFB0; font-size: 0.75rem; font-weight: 600;
+      padding: 5px 14px; border-radius: 50px;
+      letter-spacing: 0.6px; text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .badge .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #4DB860; animation: pulse 1.6s infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.5)} }
 
-/* HEADER BAND */
-.hband {
-  background: linear-gradient(135deg, #ff6600, #ffaa00);
-  padding: 2.5mm 8mm;
-  text-align: center;
-  font-size: 7pt; font-weight: 700;
-  color: rgba(255,255,255,0.9);
-  letter-spacing: 1px; text-transform: uppercase;
-}
+    .hero h1 {
+      font-family: 'Lexend', sans-serif;
+      font-size: clamp(1.9rem, 5vw, 3.2rem);
+      font-weight: 700; color: #ffffff;
+      line-height: 1.15; letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .hero h1 em { font-style: normal; color: #7BE88A; }
+    .hero-sub {
+      font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+      color: rgba(255,255,255,0.75);
+      max-width: 520px; margin: 0 auto 32px;
+    }
+    .price-tag {
+      display: inline-block;
+      background: var(--gold);
+      color: #1A1A00; font-family: 'Lexend', sans-serif;
+      font-size: clamp(1.3rem, 3vw, 1.9rem); font-weight: 700;
+      padding: 12px 36px; border-radius: 50px;
+      margin-bottom: 32px; letter-spacing: -0.5px;
+    }
+    .stats-row {
+      display: flex; justify-content: center; gap: 12px;
+      flex-wrap: wrap; margin-bottom: 36px;
+    }
+    .stat-chip {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(6px);
+      padding: 10px 20px; border-radius: var(--radius);
+      text-align: center;
+    }
+    .stat-chip strong {
+      display: block; font-family: 'Lexend', sans-serif;
+      font-size: 1.4rem; font-weight: 700; color: #7BE88A;
+    }
+    .stat-chip span { font-size: 0.75rem; color: rgba(255,255,255,0.65); }
+    .hero-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--green2); color: #fff;
+      font-weight: 700; font-size: 0.95rem;
+      padding: 14px 32px; border-radius: 50px; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(58,150,72,0.45);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
+    .btn-outline-w {
+      border: 1.5px solid rgba(255,255,255,0.4); color: #fff;
+      font-weight: 600; font-size: 0.95rem;
+      padding: 13px 28px; border-radius: 50px; text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-outline-w:hover { background: rgba(255,255,255,0.1); }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 3.5mm 8mm 2.5mm;
-}
-.hero-title {
-  font-size: 18pt; font-weight: 900; line-height: 1.1; color: #fff; margin-bottom: 2mm;
-}
-.hero-title .hl { color: #ffaa20; }
-.sol-line {
-  font-size: 8pt; font-weight: 800; color: #ffdd60;
-  background: rgba(255,180,0,0.10); border: 1px solid rgba(255,180,0,0.25);
-  border-radius: 6px; display: inline-block; padding: 1.2mm 5mm; margin-bottom: 2.5mm;
-}
-.price-pill {
-  display: inline-flex; align-items: center; gap: 3mm;
-  background: linear-gradient(135deg, #ff5500, #ffaa00);
-  border-radius: 8px; padding: 2mm 8mm;
-}
-.pfrom { font-size: 7.5pt; font-weight: 700; color: rgba(255,255,255,0.85); }
-.pamt  { font-size: 18pt; font-weight: 900; color: #fff; }
+    /* LAYOUT HELPERS */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 72px 0; }
 
-/* BODY */
-.body-wrap { padding: 0 6mm; display: flex; flex-direction: column; gap: 2mm; }
+    .sec-label {
+      display: inline-block;
+      background: var(--bg3); border: 1px solid var(--border);
+      color: var(--green); font-size: 0.72rem; font-weight: 600;
+      padding: 4px 12px; border-radius: 50px;
+      letter-spacing: 0.7px; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .sec-title {
+      font-family: 'Lexend', sans-serif;
+      font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+      font-weight: 700; color: var(--accent);
+      letter-spacing: -0.4px; line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .sec-title em { font-style: normal; color: var(--green2); }
+    .sec-desc { color: var(--muted); font-size: 0.9rem; margin-bottom: 40px; }
+    .divider { width: 40px; height: 3px; background: var(--green3); border-radius: 4px; margin: 10px 0 36px; }
 
-.sec-label {
-  font-size: 6pt; font-weight: 700; letter-spacing: 1.5px;
-  text-transform: uppercase; color: #ff9030; margin-bottom: 1.2mm;
-}
+    /* PAIN / SOLUTION */
+    .pain-sol { background: var(--surface); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media(max-width:660px){ .two-col { grid-template-columns: 1fr; } }
+    .col-block {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 24px;
+    }
+    .col-block h3 {
+      font-family: 'Lexend', sans-serif; font-size: 0.85rem;
+      font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .col-block.pain h3 { color: #C0392B; }
+    .col-block.sol h3 { color: var(--green); }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .check-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text); }
+    .ci {
+      width: 20px; height: 20px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 0.7rem; margin-top: 2px; font-weight: 700;
+    }
+    .pain .ci { background: #FDECEA; color: #C0392B; }
+    .sol .ci { background: #E4F5E7; color: var(--green); }
 
-/* Pain */
-.pain-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1.2mm;
-  background: rgba(200,40,40,0.08); border: 1px solid rgba(200,40,40,0.25);
-  border-radius: 6px; padding: 2mm 2.5mm;
-}
-.pain-item { display: flex; align-items: flex-start; gap: 1.5mm; font-size: 7.5pt; color: #e8d0d0; line-height: 1.3; }
-.xd {
-  min-width: 4mm; height: 4mm; background: rgba(220,50,50,0.85); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 6pt; font-weight: 900; color: #fff; margin-top: 0.3mm; flex-shrink: 0;
-}
+    /* FEATURES */
+    .features { background: var(--bg2); }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px,1fr)); gap: 16px; }
+    .feat-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 20px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .feat-card:hover { border-color: var(--green3); transform: translateY(-2px); }
+    .feat-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--bg3); display: flex; align-items: center;
+      justify-content: center; font-size: 1.2rem; margin-bottom: 12px;
+    }
+    .feat-card h4 { font-size: 0.88rem; font-weight: 700; margin-bottom: 5px; color: var(--accent); }
+    .feat-card p { font-size: 0.81rem; color: var(--muted); line-height: 1.5; }
 
-/* Features */
-.feat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2mm; }
-.feat-item {
-  display: flex; align-items: flex-start; gap: 1.5mm;
-  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 4px; padding: 1.8mm 2mm; font-size: 7.2pt; color: #d0e8d5; line-height: 1.3;
-}
-.chk {
-  min-width: 4mm; height: 4mm; background: rgba(40,185,100,0.85); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 6pt; font-weight: 900; color: #fff; margin-top: 0.3mm; flex-shrink: 0;
-}
+    /* INCLUDES */
+    .includes { background: var(--surface); }
+    .inc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap: 12px; }
+    .inc-chip {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 16px 14px;
+      text-align: center; font-size: 0.83rem; font-weight: 600;
+      color: var(--accent); transition: all 0.2s;
+    }
+    .inc-chip:hover { background: var(--bg3); border-color: var(--green3); }
+    .inc-chip .i { font-size: 1.4rem; display: block; margin-bottom: 7px; }
 
-/* Chips */
-.chips { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.2mm; }
-.chip {
-  background: rgba(255,200,50,0.08); border: 1px solid rgba(255,200,50,0.22);
-  border-radius: 4px; padding: 1.2mm 1mm;
-  text-align: center; font-size: 6.8pt; color: #eed870; font-weight: 600; line-height: 1.25;
-}
+    /* GIFTS */
+    .gifts { background: var(--bg2); }
+    .gifts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 16px; }
+    .gift-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 20px;
+      display: flex; align-items: flex-start; gap: 14px;
+    }
+    .gift-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .gift-card h4 { font-size: 0.88rem; font-weight: 700; color: var(--green); margin-bottom: 4px; }
+    .gift-card p { font-size: 0.8rem; color: var(--muted); }
 
-/* Gifts */
-.gifts-row { display: flex; flex-wrap: wrap; gap: 1.2mm; }
-.gift-tag {
-  background: rgba(255,100,180,0.09); border: 1px solid rgba(255,100,180,0.22);
-  border-radius: 4px; padding: 1mm 2mm; font-size: 6.8pt; color: #ffb3e8; font-weight: 600;
-}
+    /* SUITABLE */
+    .suitable { background: var(--surface); }
+    .suit-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .suit-tag {
+      background: var(--bg2); border: 1px solid var(--border);
+      padding: 9px 18px; border-radius: 50px;
+      font-size: 0.83rem; font-weight: 600; color: var(--accent);
+      transition: all 0.2s; cursor: default;
+    }
+    .suit-tag:hover { background: var(--green2); color: #fff; border-color: var(--green2); }
 
-/* Stats */
-.stats-bar {
-  display: flex; justify-content: space-around; align-items: center;
-  background: rgba(255,140,48,0.12); border: 1px solid rgba(255,140,48,0.25);
-  border-radius: 6px; padding: 2mm 4mm;
-}
-.stat-item { text-align: center; }
-.sv { font-size: 13pt; font-weight: 900; color: #ffbb30; }
-.sl { font-size: 6pt; color: #aaa; font-weight: 600; }
-.sdiv { width: 0.3mm; height: 7mm; background: rgba(255,140,48,0.22); }
+    /* PROCESS */
+    .process { background: var(--bg2); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px,1fr)); gap: 18px; }
+    .step {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px 20px; text-align: center;
+    }
+    .step-num {
+      font-family: 'Lexend', sans-serif; font-size: 2.2rem; font-weight: 700;
+      color: var(--green3); display: block; margin-bottom: 10px;
+    }
+    .step h4 { font-size: 0.88rem; font-weight: 700; color: var(--accent); margin-bottom: 7px; }
+    .step p { font-size: 0.8rem; color: var(--muted); }
 
-/* CTA */
-.cta-bar {
-  background: linear-gradient(135deg, #ff5500, #ffaa00);
-  border-radius: 6px; padding: 2mm 5mm;
-  text-align: center; font-size: 8pt; font-weight: 800; color: #fff;
-}
+    /* CTA BANNER */
+    .cta-section { background: var(--accent); padding: 72px 0; }
+    .cta-inner {
+      max-width: 700px; margin: 0 auto; padding: 0 24px; text-align: center;
+    }
+    .cta-inner h2 {
+      font-family: 'Lexend', sans-serif;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      font-weight: 700; color: #fff;
+      margin-bottom: 12px; line-height: 1.25;
+    }
+    .cta-inner h2 em { font-style: normal; color: var(--gold); }
+    .cta-inner p { color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 28px; }
+    .cta-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .btn-gold {
+      background: var(--gold); color: #1A1A00;
+      font-weight: 700; font-size: 0.95rem;
+      padding: 14px 32px; border-radius: 50px; text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-gold:hover { opacity: 0.9; transform: translateY(-2px); }
+    .btn-outline-w2 {
+      border: 1.5px solid rgba(255,255,255,0.4); color: #fff;
+      font-weight: 600; font-size: 0.95rem;
+      padding: 13px 28px; border-radius: 50px; text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-outline-w2:hover { background: rgba(255,255,255,0.1); }
 
-/* Contact */
-.contact-box {
-  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 7px; padding: 2.5mm 3.5mm;
-}
-.co-hdr {
-  display: flex; justify-content: space-between; align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  padding-bottom: 1.8mm; margin-bottom: 2mm;
-}
-.co-name { font-size: 9.5pt; font-weight: 900; color: #fff; }
-.co-sub  { font-size: 6pt; color: #888; letter-spacing: 0.8px; margin-top: 0.3mm; }
-.fbadge {
-  background: linear-gradient(135deg, #ff5500, #ffaa00);
-  border-radius: 5px; padding: 1.2mm 2.5mm;
-  font-size: 7pt; font-weight: 800; color: #fff; text-align: center; line-height: 1.3;
-}
-.cgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2mm 5mm; }
-.crow { display: flex; align-items: flex-start; gap: 1.5mm; font-size: 7.2pt; color: #ccc; line-height: 1.3; }
-.crow a { color: #80c8ff; text-decoration: none; }
-.ci { font-size: 7.5pt; min-width: 4mm; flex-shrink: 0; }
+    /* CONTACT */
+    .contact { background: var(--surface); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media(max-width:660px){ .contact-grid { grid-template-columns: 1fr; } }
+    .contact-box {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 24px;
+    }
+    .contact-box h3 {
+      font-family: 'Lexend', sans-serif; font-size: 0.95rem;
+      font-weight: 700; color: var(--green); margin-bottom: 20px;
+    }
+    .crow {
+      display: flex; align-items: flex-start; gap: 11px;
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+    .crow:last-child { border-bottom: none; }
+    .cicon { width: 20px; text-align: center; flex-shrink: 0; margin-top: 1px; font-size: 1rem; }
+    .crow a { color: var(--green2); text-decoration: none; }
+    .crow a:hover { text-decoration: underline; }
+    .lbl { color: var(--muted); flex-shrink: 0; min-width: 130px; font-size: 0.83rem; }
 
-/* Footer */
-.footer {
-  text-align: center; font-size: 5.5pt; color: rgba(255,255,255,0.17);
-  padding: 1.5mm 0 2mm; letter-spacing: 0.5px;
-}
-</style>
+    /* FOOTER */
+    footer {
+      background: var(--accent); padding: 32px 0;
+      text-align: center;
+    }
+    footer .flogo {
+      font-family: 'Lexend', sans-serif; font-size: 1.2rem;
+      font-weight: 700; color: #fff; display: block; margin-bottom: 7px;
+    }
+    footer p { font-size: 0.8rem; color: rgba(255,255,255,0.55); }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    footer a:hover { color: #fff; }
+
+    /* FLOAT BUTTONS */
+    .float-bar {
+      position: fixed; bottom: 22px; right: 18px;
+      display: flex; flex-direction: column; gap: 10px; z-index: 200;
+    }
+    .fb {
+      width: 50px; height: 50px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; text-decoration: none;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    .fb:hover { transform: scale(1.1); }
+    .fb-call { background: #22C55E; color: #fff; animation: ring 2.2s infinite; }
+    @keyframes ring { 0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5)} 55%{box-shadow:0 0 0 10px rgba(34,197,94,0)} }
+    .fb-zalo { background: #0068FF; color: #fff; }
+    .fb-fb   { background: #1877F2; color: #fff; }
+
+    @media(max-width:480px){
+      .hero { min-height: 80vh; }
+    }
+  </style>
 </head>
 <body>
-  <div class="bg-c1"></div>
-  <div class="bg-c2"></div>
 
-  <div class="hband">🔥 Giải pháp số cho doanh nghiệp Việt – Nhanh · Rẻ · Chuyên nghiệp 🔥</div>
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">YOHU <span>VN</span></a>
+    <a href="https://zalo.me/84339606969" class="btn-cta-sm" target="_blank" rel="noopener">Tư vấn miễn phí</a>
+  </div>
+</header>
 
-  <div class="hero">
-    <div class="hero-title">THIẾT KẾ WEBSITE<br><span class="hl">TRỌN GÓI CHUYÊN NGHIỆP</span></div>
-    <div class="sol-line">👉 GIẢI PHÁP WEBSITE DOANH NGHIỆP MINI CHỈ TỪ 500K</div>
-    <div style="margin-top:2mm;">
-      <div class="price-pill"><span class="pfrom">Chỉ từ</span><span class="pamt">500.000 ₫</span></div>
+<!-- HERO with Background Video -->
+<section class="hero">
+  <div class="hero-video-wrap">
+    <!-- Video: người làm việc trên laptop / văn phòng hiện đại – Pexels free -->
+    <video autoplay muted loop playsinline preload="auto"
+      poster="https://images.pexels.com/videos/3130284/pictures/preview-0.jpg">
+      <source src="video/hero.mp4" type="video/mp4" />
+      <!-- fallback nếu video không load -->
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="badge"><span class="dot"></span>Ưu đãi dành riêng doanh nghiệp nhỏ</div>
+    <h1>Thiết Kế Website<br><em>Trọn Gói Chuyên Nghiệp</em></h1>
+    <p class="hero-sub">Giải pháp số cho doanh nghiệp Việt – Nhanh · Rẻ · Chuyên nghiệp. Không cần kỹ thuật, hoàn thiện chỉ trong 1–3 ngày.</p>
+    <div class="price-tag">Chỉ từ 500.000 ₫</div>
+    <div class="stats-row">
+      <div class="stat-chip"><strong>500K</strong><span>Chỉ từ</span></div>
+      <div class="stat-chip"><strong>1–3</strong><span>Ngày hoàn thiện</span></div>
+      <div class="stat-chip"><strong>2</strong><span>Ngôn ngữ</span></div>
+      <div class="stat-chip"><strong>100%</strong><span>Chuẩn Mobile</span></div>
+    </div>
+    <div class="hero-btns">
+      <a href="https://zalo.me/84339606969" class="btn-primary" target="_blank" rel="noopener">Nhắn Zalo ngay</a>
+      <a href="mailto:yohu.vn@gmail.com" class="btn-outline-w">Gửi email</a>
     </div>
   </div>
+</section>
 
-  <div class="body-wrap">
-
-    <div>
-      <div class="sec-label">Bạn đang gặp phải?</div>
-      <div class="pain-grid">
-        <div class="pain-item"><div class="xd">✕</div><span>Chưa có website chuyên nghiệp?</span></div>
-        <div class="pain-item"><div class="xd">✕</div><span>Khách hàng khó tìm trên Google?</span></div>
-        <div class="pain-item"><div class="xd">✕</div><span>Chỉ bán hàng qua Facebook / Zalo?</span></div>
-        <div class="pain-item"><div class="xd">✕</div><span>Chi phí làm website quá cao?</span></div>
+<!-- PAIN / SOLUTION -->
+<section class="pain-sol">
+  <div class="container">
+    <span class="sec-label">Vấn đề & Giải pháp</span>
+    <h2 class="sec-title">Bạn đang <em>gặp phải</em>?</h2>
+    <div class="divider"></div>
+    <div class="two-col">
+      <div class="col-block pain">
+        <h3>Vấn đề hiện tại</h3>
+        <ul class="check-list">
+          <li><span class="ci">✕</span>Chưa có website chuyên nghiệp?</li>
+          <li><span class="ci">✕</span>Khách hàng khó tìm trên Google?</li>
+          <li><span class="ci">✕</span>Chỉ bán hàng qua Facebook / Zalo?</li>
+          <li><span class="ci">✕</span>Chi phí làm website quá cao?</li>
+        </ul>
+      </div>
+      <div class="col-block sol">
+        <h3>Giải pháp YOHU</h3>
+        <ul class="check-list">
+          <li><span class="ci">✓</span>Website chuẩn thiết kế, hoàn thiện 1–3 ngày.</li>
+          <li><span class="ci">✓</span>Chuẩn SEO – khách hàng dễ tìm trên Google.</li>
+          <li><span class="ci">✓</span>Tích hợp Zalo, Facebook, nút gọi nhanh.</li>
+          <li><span class="ci">✓</span>Trọn gói chỉ từ 500.000₫, không phát sinh.</li>
+        </ul>
       </div>
     </div>
-
-    <div>
-      <div class="sec-label">Những gì bạn nhận được</div>
-      <div class="feat-grid">
-        <div class="feat-item"><div class="chk">✓</div><span>Tên miền <b>Free</b> tùy chọn (.io, .online,...)</span></div>
-        <div class="feat-item"><div class="chk">✓</div><span>Giao diện hiện đại – chuẩn điện thoại &amp; máy tính</span></div>
-        <div class="feat-item"><div class="chk">✓</div><span>Tích hợp 2 ngôn ngữ (Việt – Anh hoặc tùy chọn)</span></div>
-        <div class="feat-item"><div class="chk">✓</div><span>Chuẩn SEO – khách hàng dễ tìm trên Google</span></div>
-        <div class="feat-item"><div class="chk">✓</div><span>Hosting tốc độ cao – giao diện chuyên nghiệp</span></div>
-        <div class="feat-item"><div class="chk">✓</div><span>Tự thay đổi hình ảnh &amp; nội dung dễ dàng</span></div>
-        <div class="feat-item"><div class="chk">✓</div><span>Tặng banner sản phẩm &amp; ảnh quảng cáo sẵn</span></div>
-        <div class="feat-item"><div class="chk">✓</div><span>Hỗ trợ đăng website trực tuyến hoàn chỉnh</span></div>
-        <div class="feat-item" style="grid-column:span 2"><div class="chk">✓</div><span>Phù hợp: bán hàng · showroom · spa · nội thất · thiết bị vệ sinh · điện máy · dịch vụ...</span></div>
-      </div>
-    </div>
-
-    <div>
-      <div class="sec-label">Thông tin cơ bản website bao gồm</div>
-      <div class="chips">
-        <div class="chip">Giới thiệu<br>công ty</div>
-        <div class="chip">Banner<br>quảng cáo</div>
-        <div class="chip">Danh mục<br>sản phẩm</div>
-        <div class="chip">Thông tin<br>liên hệ</div>
-        <div class="chip">Google<br>Maps</div>
-        <div class="chip">Zalo &amp;<br>Facebook</div>
-        <div class="chip">Form<br>liên hệ</div>
-        <div class="chip">Hình ảnh<br>sản phẩm</div>
-        <div class="chip">Nút gọi<br>nhanh</div>
-        <div class="chip">Chat<br>trực tiếp</div>
-      </div>
-    </div>
-
-    <div>
-      <div class="sec-label">🎁 Tặng kèm miễn phí &amp; ⏱ Thời gian: 1–3 ngày</div>
-      <div class="gifts-row">
-        <div class="gift-tag">🎨 Banner quảng cáo chuyên nghiệp</div>
-        <div class="gift-tag">📖 Hướng dẫn tự chèn ảnh</div>
-        <div class="gift-tag">✏️ Hướng dẫn tự sửa nội dung</div>
-        <div class="gift-tag">🚀 Hỗ trợ đăng &amp; cập nhật cơ bản</div>
-      </div>
-    </div>
-
-    <div class="stats-bar">
-      <div class="stat-item"><div class="sv">500K</div><div class="sl">Chỉ từ</div></div>
-      <div class="sdiv"></div>
-      <div class="stat-item"><div class="sv">1–3</div><div class="sl">Ngày hoàn thiện</div></div>
-      <div class="sdiv"></div>
-      <div class="stat-item"><div class="sv">2</div><div class="sl">Ngôn ngữ</div></div>
-      <div class="sdiv"></div>
-      <div class="stat-item"><div class="sv">100%</div><div class="sl">Chuẩn Mobile</div></div>
-    </div>
-
-    <div class="cta-bar">👉 Inbox ngay để xem demo website thực tế &amp; nhận tư vấn MIỄN PHÍ!</div>
-
-    <div class="contact-box">
-      <div class="co-hdr">
-        <div>
-          <div class="co-name">CÔNG TY TNHH YOHU VIỆT NAM</div>
-          <div class="co-sub">GIẢI PHÁP WEBSITE – MARKETING ONLINE</div>
-        </div>
-        <div class="fbadge">Tư vấn<br>Miễn Phí</div>
-      </div>
-      <div class="cgrid">
-        <div class="crow"><span class="ci">📍</span><span>BT39 Khu Biệt thự Tân Phố Hiến Yên</span></div>
-        <div class="crow"><span class="ci">☎</span><span>Hotline: <b>+84 973 480 488</b></span></div>
-        <div class="crow"><span class="ci">💬</span><span>Zalo: <b>+84 339 60 69 69</b></span></div>
-        <div class="crow"><span class="ci">📧</span><span>yohu.vn@gmail.com</span></div>
-        <div class="crow"><span class="ci">🌐</span><span>Quản lý: <a href="https://app.379ai.io.vn/">app.379ai.io.vn</a></span></div>
-        <div class="crow"><span class="ci">🌐</span><span>AI Tool: <a href="https://379ai.io.vn/">379ai.io.vn</a></span></div>
-        <div class="crow"><span class="ci">🌐</span><span>TBVS: <a href="https://yohu-pro.github.io/TBVS/">yohu-pro.github.io/TBVS</a></span></div>
-        <div class="crow"><span class="ci">🌐</span><span>Web mẫu: <a href="https://379aipro.online">379aipro.online</a></span></div>
-        <div class="crow" style="grid-column:span 2"><span class="ci">👍</span><span>Facebook: <a href="https://www.facebook.com/share/18jegAjXrb/">facebook.com/share/18jegAjXrb</a></span></div>
-      </div>
-    </div>
-
   </div>
+</section>
 
-  <div class="footer">CÔNG TY TNHH YOHU VIỆT NAM · BT39 Khu Biệt thự Tân Phố Hiến Yên · yohu.vn@gmail.com</div>
+<!-- FEATURES -->
+<section class="features">
+  <div class="container">
+    <span class="sec-label">Tính năng</span>
+    <h2 class="sec-title">Những gì bạn <em>nhận được</em></h2>
+    <p class="sec-desc">Đầy đủ tính năng, chuẩn chuyên nghiệp – giao ngay trong 1–3 ngày</p>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="feat-icon">🌐</div><h4>Tên miền Free tùy chọn</h4><p>Hỗ trợ .io, .online và nhiều đuôi khác, hoàn toàn miễn phí.</p></div>
+      <div class="feat-card"><div class="feat-icon">📱</div><h4>Giao diện chuẩn Mobile</h4><p>Hiển thị đẹp trên điện thoại, máy tính bảng và máy tính.</p></div>
+      <div class="feat-card"><div class="feat-icon">🌏</div><h4>Tích hợp 2 ngôn ngữ</h4><p>Việt – Anh hoặc tùy chọn ngôn ngữ phù hợp thị trường của bạn.</p></div>
+      <div class="feat-card"><div class="feat-icon">🔍</div><h4>Chuẩn SEO Google</h4><p>Tối ưu thẻ meta, tốc độ tải nhanh – khách hàng dễ tìm thấy bạn.</p></div>
+      <div class="feat-card"><div class="feat-icon">⚡</div><h4>Hosting tốc độ cao</h4><p>Máy chủ ổn định, tốc độ tải nhanh, trải nghiệm người dùng tốt.</p></div>
+      <div class="feat-card"><div class="feat-icon">✏️</div><h4>Tự sửa nội dung dễ dàng</h4><p>Tự thay đổi hình ảnh & nội dung mà không cần kỹ thuật.</p></div>
+      <div class="feat-card"><div class="feat-icon">🖼️</div><h4>Banner & ảnh quảng cáo</h4><p>Tặng kèm banner sản phẩm & ảnh quảng cáo đã chỉnh sửa sẵn.</p></div>
+      <div class="feat-card"><div class="feat-icon">🚀</div><h4>Đăng website hoàn chỉnh</h4><p>Hỗ trợ đưa website lên online, không tự làm cũng được.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDES -->
+<section class="includes">
+  <div class="container">
+    <span class="sec-label">Nội dung</span>
+    <h2 class="sec-title">Website bao gồm <em>đầy đủ</em></h2>
+    <p class="sec-desc">Tất cả module cần thiết cho một website doanh nghiệp chuyên nghiệp</p>
+    <div class="inc-grid">
+      <div class="inc-chip"><span class="i">🏢</span>Giới thiệu công ty</div>
+      <div class="inc-chip"><span class="i">📣</span>Banner quảng cáo</div>
+      <div class="inc-chip"><span class="i">📦</span>Danh mục sản phẩm</div>
+      <div class="inc-chip"><span class="i">📍</span>Thông tin liên hệ</div>
+      <div class="inc-chip"><span class="i">🗺️</span>Google Maps</div>
+      <div class="inc-chip"><span class="i">💬</span>Zalo & Facebook</div>
+      <div class="inc-chip"><span class="i">📋</span>Form liên hệ</div>
+      <div class="inc-chip"><span class="i">🖼️</span>Hình ảnh sản phẩm</div>
+      <div class="inc-chip"><span class="i">📞</span>Nút gọi nhanh</div>
+      <div class="inc-chip"><span class="i">💬</span>Chat trực tiếp</div>
+    </div>
+  </div>
+</section>
+
+<!-- GIFTS -->
+<section class="gifts">
+  <div class="container">
+    <span class="sec-label">Quà tặng kèm</span>
+    <h2 class="sec-title">Tặng kèm <em>miễn phí</em></h2>
+    <p class="sec-desc">Những giá trị cộng thêm không mất thêm chi phí</p>
+    <div class="gifts-grid">
+      <div class="gift-card"><span class="gift-icon">🎨</span><div><h4>Banner quảng cáo chuyên nghiệp</h4><p>Thiết kế sẵn, phù hợp ngành nghề, dùng ngay.</p></div></div>
+      <div class="gift-card"><span class="gift-icon">📸</span><div><h4>Hướng dẫn tự chèn ảnh</h4><p>Video & tài liệu hướng dẫn chi tiết, dễ thực hiện.</p></div></div>
+      <div class="gift-card"><span class="gift-icon">✍️</span><div><h4>Hướng dẫn tự sửa nội dung</h4><p>Tự cập nhật thông tin sản phẩm, giá cả bất cứ lúc nào.</p></div></div>
+      <div class="gift-card"><span class="gift-icon">🛠️</span><div><h4>Hỗ trợ đăng & cập nhật cơ bản</h4><p>Đội ngũ hỗ trợ trực tiếp đưa website lên online cho bạn.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUITABLE -->
+<section class="suitable">
+  <div class="container">
+    <span class="sec-label">Phù hợp với</span>
+    <h2 class="sec-title">Mọi <em>ngành nghề</em></h2>
+    <p class="sec-desc">Từ cửa hàng nhỏ đến doanh nghiệp, chúng tôi đều có giải pháp</p>
+    <div class="suit-grid">
+      <span class="suit-tag">🛒 Bán hàng online</span>
+      <span class="suit-tag">🏢 Công ty / Doanh nghiệp</span>
+      <span class="suit-tag">🚗 Showroom xe</span>
+      <span class="suit-tag">💆 Spa / Thẩm mỹ</span>
+      <span class="suit-tag">🛋️ Nội thất</span>
+      <span class="suit-tag">🚿 Thiết bị vệ sinh</span>
+      <span class="suit-tag">⚡ Điện máy</span>
+      <span class="suit-tag">🍜 Nhà hàng / Quán ăn</span>
+      <span class="suit-tag">🏗️ Xây dựng</span>
+      <span class="suit-tag">📚 Giáo dục / Khóa học</span>
+      <span class="suit-tag">💼 Dịch vụ B2B</span>
+      <span class="suit-tag">🩺 Y tế / Phòng khám</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="container">
+    <span class="sec-label">Quy trình</span>
+    <h2 class="sec-title">Chỉ <em>4 bước</em> đơn giản</h2>
+    <p class="sec-desc">Từ lúc liên hệ đến khi website lên online</p>
+    <div class="steps">
+      <div class="step"><span class="step-num">01</span><h4>Liên hệ tư vấn</h4><p>Inbox Zalo hoặc Facebook để nhận tư vấn miễn phí và xem demo thực tế.</p></div>
+      <div class="step"><span class="step-num">02</span><h4>Cung cấp thông tin</h4><p>Gửi logo, hình ảnh sản phẩm, nội dung và yêu cầu cụ thể của bạn.</p></div>
+      <div class="step"><span class="step-num">03</span><h4>Thiết kế & Duyệt</h4><p>Chúng tôi thiết kế trong 1–3 ngày, bạn duyệt và yêu cầu chỉnh sửa.</p></div>
+      <div class="step"><span class="step-num">04</span><h4>Website lên live</h4><p>Website được đưa lên online, bàn giao đầy đủ tài liệu hướng dẫn.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Inbox ngay để xem demo thực tế<br>&amp; nhận tư vấn <em>miễn phí!</em></h2>
+    <p>Đừng để đối thủ đi trước – website chuyên nghiệp chỉ cần 1–3 ngày với chi phí cực thấp</p>
+    <div class="cta-btns">
+      <a href="https://zalo.me/84339606969" class="btn-gold" target="_blank" rel="noopener">Nhắn Zalo ngay</a>
+      <a href="https://facebook.com/share/18jegAjXrb" class="btn-outline-w2" target="_blank" rel="noopener">Facebook / Fanpage</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="container">
+    <span class="sec-label">Liên hệ</span>
+    <h2 class="sec-title">Thông tin <em>liên hệ</em></h2>
+    <div class="divider"></div>
+    <div class="contact-grid">
+      <div class="contact-box">
+        <h3>Liên hệ trực tiếp</h3>
+        <div class="crow"><span class="cicon">📍</span><span>BT39 Khu Biệt thự Tân Phố Hiến, Hưng Yên</span></div>
+        <div class="crow"><span class="cicon">📞</span><a href="tel:+84973480488">+84 973 480 488</a></div>
+        <div class="crow"><span class="cicon">💬</span><a href="https://zalo.me/84339606969" target="_blank" rel="noopener">Zalo: +84 339 60 69 69</a></div>
+        <div class="crow"><span class="cicon">✉️</span><a href="mailto:yohu.vn@gmail.com">yohu.vn@gmail.com</a></div>
+        <div class="crow"><span class="cicon">👍</span><a href="https://facebook.com/share/18jegAjXrb" target="_blank" rel="noopener">Facebook / Fanpage</a></div>
+      </div>
+      <div class="contact-box">
+        <h3>Sản phẩm & Demo</h3>
+        <div class="crow"><span class="lbl">Quản lý bán hàng</span><a href="https://app.379ai.io.vn" target="_blank" rel="noopener">app.379ai.io.vn</a></div>
+        <div class="crow"><span class="lbl">Kịch bản – Ảnh – Video</span><a href="https://379ai.io.vn" target="_blank" rel="noopener">379ai.io.vn</a></div>
+        <div class="crow"><span class="lbl">Showroom TBVS</span><a href="https://yohu-pro.github.io/TBVS" target="_blank" rel="noopener">yohu-pro.github.io/TBVS</a></div>
+        <div class="crow"><span class="lbl">Web mẫu</span><a href="https://379aipro.online" target="_blank" rel="noopener">379aipro.online</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <span class="flogo">CÔNG TY TNHH YOHU VIỆT NAM</span>
+    <p>BT39 Khu Biệt thự Tân Phố Hiến, Hưng Yên &nbsp;·&nbsp; <a href="mailto:yohu.vn@gmail.com">yohu.vn@gmail.com</a></p>
+    <p style="margin-top:6px;font-size:.72rem;color:rgba(255,255,255,.35);">© 2025 YOHU Việt Nam. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- FLOAT BUTTONS -->
+<div class="float-bar">
+  <a href="tel:+84973480488" class="fb fb-call" title="Gọi ngay" aria-label="Gọi điện">📞</a>
+  <a href="https://zalo.me/84339606969" class="fb fb-zalo" title="Chat Zalo" target="_blank" rel="noopener" aria-label="Zalo">💬</a>
+  <a href="https://facebook.com/share/18jegAjXrb" class="fb fb-fb" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">👍</a>
+</div>
+
 </body>
 </html>
