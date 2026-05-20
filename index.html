@@ -364,15 +364,16 @@
     .fb-zalo { background: #0068FF; color: #fff; }
     .fb-fb   { background: #1877F2; color: #fff; }
 
-    /* YOUTUBE HERO */
-    .yt-hero-wrap {
+    /* HERO VIDEO */
+    .hero-video-wrap {
       position: absolute; inset: 0; z-index: 0;
-      overflow: hidden; pointer-events: none;
+      overflow: hidden;
     }
-    .yt-hero-wrap iframe {
+    .hero-video-wrap video {
       width: 100%; height: 100%;
+      object-fit: cover;
       position: absolute; top: 50%; left: 50%;
-      transform: translate(-50%,-50%) scale(1.08);
+      transform: translate(-50%, -50%);
       min-width: 100%; min-height: 100%;
     }
 
@@ -443,7 +444,18 @@
     .testi-author span { font-size: 0.78rem; color: var(--muted); }
 
     @media(max-width:480px){
-      .hero { min-height: 80vh; }
+      .hero { min-height: 100svh; padding: 0; }
+      .hero-content { padding: 32px 16px; }
+      .badge { font-size: 0.8rem; padding: 6px 14px; margin-bottom: 18px; }
+      .hero h1 { font-size: 2rem; letter-spacing: -0.5px; margin-bottom: 14px; }
+      .hero-sub { font-size: 1rem; margin-bottom: 22px; }
+      .price-tag { font-size: 1.6rem; padding: 12px 28px; margin-bottom: 22px; }
+      .stats-row { gap: 8px; margin-bottom: 24px; }
+      .stat-chip { padding: 10px 16px; }
+      .stat-chip strong { font-size: 1.35rem; }
+      .stat-chip span { font-size: 0.78rem; }
+      .hero-btns { flex-direction: column; align-items: center; gap: 10px; }
+      .btn-primary, .btn-outline-w { width: 100%; max-width: 280px; text-align: center; font-size: 1rem; padding: 14px 20px; }
     }
   </style>
 </head>
@@ -459,15 +471,12 @@
 
 <!-- HERO with Background Video -->
 <section class="hero">
-  <div class="yt-hero-wrap">
-    <!-- YouTube: văn phòng hiện đại, làm việc laptop – loop autoplay muted -->
-    <iframe
-      src="https://www.youtube.com/embed/kUdZ1b0TMIQ?autoplay=1&mute=1&loop=1&playlist=kUdZ1b0TMIQ&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&iv_load_policy=3"
-      title="background video"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
+  <div class="hero-video-wrap">
+    <!-- Video mp4 CDN public – autoplay hoạt động trên cả mobile -->
+    <video autoplay muted loop playsinline
+      poster="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=60&auto=format">
+      <source src="https://public.readdy.ai/ai/video_res/9de87693-20e7-4ed8-b6c5-d4986a6c3b62.mp4" type="video/mp4" />
+    </video>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
