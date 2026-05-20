@@ -364,6 +364,84 @@
     .fb-zalo { background: #0068FF; color: #fff; }
     .fb-fb   { background: #1877F2; color: #fff; }
 
+    /* YOUTUBE HERO */
+    .yt-hero-wrap {
+      position: absolute; inset: 0; z-index: 0;
+      overflow: hidden; pointer-events: none;
+    }
+    .yt-hero-wrap iframe {
+      width: 100%; height: 100%;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%) scale(1.08);
+      min-width: 100%; min-height: 100%;
+    }
+
+    /* SHOWCASE section */
+    .showcase { background: var(--bg2); }
+    .showcase-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 20px;
+    }
+    .showcase-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .showcase-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(45,122,58,0.12); }
+    .showcase-card img {
+      width: 100%; height: 200px; object-fit: cover; display: block;
+    }
+    .showcase-info { padding: 16px 18px; }
+    .showcase-info h4 { font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+    .showcase-info p { font-size: 0.8rem; color: var(--muted); }
+    .showcase-tag {
+      display: inline-block; margin-top: 8px;
+      background: var(--bg3); border: 1px solid var(--border);
+      color: var(--green); font-size: 0.72rem; font-weight: 600;
+      padding: 3px 10px; border-radius: 50px;
+    }
+
+    /* DEMO VIDEO section */
+    .demo-section { background: var(--surface); }
+    .demo-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+    @media(max-width:700px){ .demo-inner { grid-template-columns: 1fr; } }
+    .demo-text h3 {
+      font-family: 'Lexend', sans-serif; font-size: 1.2rem;
+      font-weight: 700; color: var(--accent); margin-bottom: 12px;
+    }
+    .demo-text p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+    .demo-list { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 22px; }
+    .demo-list li { display: flex; gap: 9px; font-size: 0.87rem; color: var(--text); }
+    .demo-list li::before {
+      content: '✓'; color: var(--green); font-weight: 700;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .yt-embed-wrap {
+      position: relative; padding-bottom: 56.25%; height: 0;
+      border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .yt-embed-wrap iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--bg2); }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 18px; }
+    .testi-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px 22px;
+    }
+    .testi-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 12px; }
+    .testi-card p { font-size: 0.85rem; color: var(--text); line-height: 1.65; margin-bottom: 16px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 10px; }
+    .testi-avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--bg3); display: flex; align-items: center;
+      justify-content: center; font-size: 1.1rem; flex-shrink: 0;
+    }
+    .testi-author strong { display: block; font-size: 0.85rem; font-weight: 700; color: var(--accent); }
+    .testi-author span { font-size: 0.78rem; color: var(--muted); }
+
     @media(max-width:480px){
       .hero { min-height: 80vh; }
     }
@@ -381,13 +459,15 @@
 
 <!-- HERO with Background Video -->
 <section class="hero">
-  <div class="hero-video-wrap">
-    <!-- Video: người làm việc trên laptop / văn phòng hiện đại – Pexels free -->
-    <video autoplay muted loop playsinline preload="auto"
-      poster="https://images.pexels.com/videos/3130284/pictures/preview-0.jpg">
-      <source src="video/hero.mp4" type="video/mp4" />
-      <!-- fallback nếu video không load -->
-    </video>
+  <div class="yt-hero-wrap">
+    <!-- YouTube: văn phòng hiện đại, làm việc laptop – loop autoplay muted -->
+    <iframe
+      src="https://www.youtube.com/embed/kUdZ1b0TMIQ?autoplay=1&mute=1&loop=1&playlist=kUdZ1b0TMIQ&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&iv_load_policy=3"
+      title="background video"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -526,6 +606,112 @@
       <div class="step"><span class="step-num">02</span><h4>Cung cấp thông tin</h4><p>Gửi logo, hình ảnh sản phẩm, nội dung và yêu cầu cụ thể của bạn.</p></div>
       <div class="step"><span class="step-num">03</span><h4>Thiết kế & Duyệt</h4><p>Chúng tôi thiết kế trong 1–3 ngày, bạn duyệt và yêu cầu chỉnh sửa.</p></div>
       <div class="step"><span class="step-num">04</span><h4>Website lên live</h4><p>Website được đưa lên online, bàn giao đầy đủ tài liệu hướng dẫn.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE: Mẫu website thực tế -->
+<section class="showcase">
+  <div class="container">
+    <span class="sec-label">Website mẫu</span>
+    <h2 class="sec-title">Xem <em>website thực tế</em> đã làm</h2>
+    <p class="sec-desc">Một số website đã được YOHU thiết kế và bàn giao cho khách hàng</p>
+    <div class="showcase-grid">
+      <div class="showcase-card">
+        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&q=80&auto=format&fit=crop" alt="Website nội thất" loading="lazy" />
+        <div class="showcase-info">
+          <h4>Showroom Nội Thất Hiện Đại</h4>
+          <p>Thiết kế sang trọng, trình bày sản phẩm nổi bật, tích hợp form liên hệ.</p>
+          <span class="showcase-tag">Nội thất</span>
+        </div>
+      </div>
+      <div class="showcase-card">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80&auto=format&fit=crop" alt="Website công ty" loading="lazy" />
+        <div class="showcase-info">
+          <h4>Website Công Ty Dịch Vụ</h4>
+          <p>Giao diện doanh nghiệp chuyên nghiệp, chuẩn SEO, 2 ngôn ngữ Việt – Anh.</p>
+          <span class="showcase-tag">Doanh nghiệp</span>
+        </div>
+      </div>
+      <div class="showcase-card">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80&auto=format&fit=crop" alt="Website spa" loading="lazy" />
+        <div class="showcase-info">
+          <h4>Website Spa & Thẩm Mỹ</h4>
+          <p>Giao diện tươi sáng, hiển thị dịch vụ & bảng giá, tích hợp đặt lịch Zalo.</p>
+          <span class="showcase-tag">Spa / Thẩm mỹ</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px;">
+      <a href="https://379aipro.online" class="btn-primary" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none;">Xem thêm website mẫu</a>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO VIDEO -->
+<section class="demo-section">
+  <div class="container">
+    <div class="demo-inner">
+      <div class="demo-text">
+        <span class="sec-label">Demo thực tế</span>
+        <h3>Website của bạn sẽ trông như thế nào?</h3>
+        <p>Xem video demo thực tế để hiểu rõ những gì YOHU sẽ thiết kế cho doanh nghiệp của bạn – từ giao diện, tính năng đến trải nghiệm người dùng.</p>
+        <ul class="demo-list">
+          <li>Giao diện hiện đại, chuẩn Mobile 100%</li>
+          <li>Tốc độ tải trang nhanh, chuẩn Google Core Web Vitals</li>
+          <li>Tích hợp Zalo, Facebook, nút gọi nhanh ngay trên trang</li>
+          <li>Form liên hệ và bản đồ Google Maps</li>
+          <li>Dễ tự chỉnh sửa nội dung, không cần kỹ thuật</li>
+        </ul>
+        <a href="https://zalo.me/84339606969" class="btn-primary" target="_blank" rel="noopener" style="display:inline-block;text-decoration:none;">Nhắn Zalo xem demo ngay</a>
+      </div>
+      <div>
+        <div class="yt-embed-wrap">
+          <!-- Video demo thiết kế website Việt Nam -->
+          <iframe
+            src="https://www.youtube.com/embed/YxgSpqFGVMg?rel=0&modestbranding=1"
+            title="Demo thiết kế website YOHU"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <span class="sec-label">Khách hàng nói gì</span>
+    <h2 class="sec-title">Phản hồi từ <em>khách hàng thực tế</em></h2>
+    <p class="sec-desc">Hàng chục doanh nghiệp nhỏ đã tin tưởng YOHU để xây dựng hiện diện online</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Trước đây tôi chỉ bán qua Facebook, sau khi có website từ YOHU thì khách hàng tìm được trên Google liên tục. Giá rẻ mà chuyên nghiệp, làm xong trong 2 ngày!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩</div>
+          <div><strong>Chị Lan Anh</strong><span>Cửa hàng thời trang, Hà Nội</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Tôi không biết gì về kỹ thuật nhưng YOHU hướng dẫn tận tình từng bước. Website đẹp, dễ dùng, khách hàng nhìn vào là tin ngay. Rất đáng tiền!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👨</div>
+          <div><strong>Anh Minh Tuấn</strong><span>Showroom vật liệu xây dựng, Hưng Yên</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Spa của tôi mới mở, cần website gấp mà không có nhiều vốn. YOHU làm trong 1 ngày, đúng như cam kết, giao diện đẹp hơn mong đợi. Sẽ giới thiệu cho bạn bè!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">💆</div>
+          <div><strong>Chị Thu Hương</strong><span>Chủ Spa & Thẩm mỹ, Bắc Ninh</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
